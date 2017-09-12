@@ -1,0 +1,47 @@
+/**
+Begin multiple
+ */
+.multiple-photo .plus-abs {
+    border: 1px dashed #ccc;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+/** End multiple */
+
+/********************************************************************************************************/
+
+/***
+Begin photo
+ */
+.has-plus {
+    display: block;
+}
+
+.has-plus > .rollover {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(51, 51, 51, 0.58);
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+.has-plus:hover > .rollover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/***
+End photo
+ */

@@ -1,0 +1,30 @@
+.ph-m-fancy-for-img {
+    display: block;
+}
+
+.ph-m-fancy-for-img > .ph-m-rollover {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(51, 51, 51, 0.58);
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+.ph-m-fancy-for-img:hover > .ph-m-rollover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail .thumb-title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+}
+
