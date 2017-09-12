@@ -14,30 +14,31 @@ Installation
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
--Development: 
-    Either run
++Development:
 
-    ```
+Either run
+
+```
     php composer.phar require murodov20/yii2-redactor-imgmanager "*"
-    ```
+```
 
-    or add
+or add
 
-    ```
+```
     "murodov20/yii2-redactor-imgmanager": "*"
-    ```
+```
 
--Production:
++Production:
 
-    ```
-    php composer.phar require murodov20/yii2-redactor-imgmanager "*"
-    ```
+```
+    php composer.phar require murodov20/yii2-redactor-imgmanager "1.0.0"
+```
 
-    or add
+or add
 
-    ```
-    "murodov20/yii2-redactor-imgmanager": "*"
-    ```
+```
+    "murodov20/yii2-redactor-imgmanager": "1.0.0"
+```
 
 
 to the require section of your `composer.json` file.
