@@ -27,8 +27,9 @@ or add
 to the require section of your `composer.json` file.
 
 After this run migration:
-
+```
 php yii migrate --migrationPath="@vendor/murodov20/yii2-redactor-imgmanager/migrations"
+```
 
 Usage
 -----
