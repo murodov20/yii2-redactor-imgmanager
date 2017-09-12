@@ -1,36 +1,35 @@
 {
-    "name": "murodov20/yii2-redactor-imgmanager",
-    "description": "Redactor with image manager, Image select widget and Multiple image placing widgets in one extension",
-    "type": "yii2-extension",
-    "homepage": "https://github.com/murodov20/yii2-redactor-imgmanager",
-    "keywords": [
-        "yii2", 
-        "extension", 
-        "imperavi redactor", 
-        "image manager"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mirjalol Murodov",
-            "email": "murodov10.7@mail.ru"
-        }
-    ],
-    "repositories":[
-        {
-            "type": "git",
-            "url": "https://github.com/murodov20/yii2-redactor-imgmanager.git"
-        }
-    ]
-    "require": {
-        "yiisoft/yii2": "*",
-        "bower-asset/venobox": "^1.8",
-        "yiisoft/yii2-imagine": "^2.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "murodov20\\redactor\\": ""
-        }
-    },
-
+  "name": "murodov20/yii2-redactor-imgmanager",
+  "description": "Redactor with image manager, Image select widget and Multiple image placing widgets in one extension",
+  "type": "yii2-extension",
+  "homepage": "https://github.com/murodov20/yii2-redactor-imgmanager",
+  "keywords": [
+    "yii2",
+    "extension",
+    "imperavi redactor",
+    "image manager"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mirjalol Murodov",
+      "email": "murodov10.7@mail.ru"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/murodov20/yii2-redactor-imgmanager.git"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/venobox": "^1.8",
+    "yiisoft/yii2-imagine": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "murodov20\\redactor\\": ""
+    }
+  }
 }
