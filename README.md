@@ -10,11 +10,11 @@ for all Yii developers. That's why this version of Redactor has OEM license and 
 Installation
 ------------
 
-! Don't use this extension in production. Extension under development. if you want to go hard with this, you can use version 1.0.0.
+> Don't use this extension in production. Extension under development. If you want to go hard with this, you can use version 1.0.0.
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-+Development:
+* Development:
 
 Either run
 
@@ -28,7 +28,7 @@ or add
     "murodov20/yii2-redactor-imgmanager": "*"
 ```
 
-+Production:
+* Production:
 
 ```
     php composer.phar require murodov20/yii2-redactor-imgmanager "1.0.0"
@@ -76,9 +76,9 @@ Using widgets:
 RedactorWidget:
 ```php
 <?= $form
-		->field($model, 'content')
-		->textarea(['rows' => 6])
-		->widget(MRedactorWidget::className(), [
+	->field($model, 'content')
+	->textarea(['rows' => 6])
+	->widget(MRedactorWidget::className(), [
             'settings' => [
                 'lang' => 'ru',
                 'minHeight' => 200,
