@@ -10,19 +10,35 @@ for all Yii developers. That's why this version of Redactor has OEM license and 
 Installation
 ------------
 
+!Don't use this extension in production. Extension under development. if you want to go hard with this, you can use version 1.0.0.
+
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Either run
+-Development: 
+    Either run
 
-```
-php composer.phar require murodov20/yii2-redactor-imgmanager "*"
-```
+    ```
+    php composer.phar require murodov20/yii2-redactor-imgmanager "*"
+    ```
 
-or add
+    or add
 
-```
-"murodov20/yii2-redactor-imgmanager": "*"
-```
+    ```
+    "murodov20/yii2-redactor-imgmanager": "*"
+    ```
+
+-Production:
+
+    ```
+    php composer.phar require murodov20/yii2-redactor-imgmanager "*"
+    ```
+
+    or add
+
+    ```
+    "murodov20/yii2-redactor-imgmanager": "*"
+    ```
+
 
 to the require section of your `composer.json` file.
 
