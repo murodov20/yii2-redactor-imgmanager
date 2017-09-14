@@ -27,17 +27,16 @@ class MRedactorAsset extends AssetBundle
 
     public $css = [
         'redactor.css',
-        'custom/style.css'
     ];
 
     public $js = [
         'redactor.min.js',
-        'custom/script.js'
     ];
 
     public $depends = [
         'yii\web\JqueryAsset',
-        'murodov20\redactor\web\VenoBoxAsset'
+        'murodov20\redactor\web\VenoBoxAsset',
+        'murodov20\redactor\web\BaseAsset',
     ];
 
     /**

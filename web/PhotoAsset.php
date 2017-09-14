@@ -25,6 +25,7 @@ class PhotoAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
         'murodov20\redactor\web\VenoBoxAsset',
+        'murodov20\redactor\web\BaseAsset',
     ];
 
 }
