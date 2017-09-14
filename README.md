@@ -31,13 +31,13 @@ or add
 * Production:
 
 ```
-    php composer.phar require murodov20/yii2-redactor-imgmanager "1.0.0"
+    php composer.phar require murodov20/yii2-redactor-imgmanager "^1.0"
 ```
 
 or add
 
 ```
-    "murodov20/yii2-redactor-imgmanager": "1.0.0"
+    "murodov20/yii2-redactor-imgmanager": "^1.0"
 ```
 
 
