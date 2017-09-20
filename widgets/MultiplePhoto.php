@@ -115,7 +115,7 @@ class MultiplePhoto extends InputWidget
         PhotoAsset::register($this->view);
 
         if ($this->noImageSrc === null) {
-            $this->noImageSrc = \Yii::$app->assetManager->getPublishedUrl('@vendor/murodov20/redactor/assets') . '/photo/no-image.png';
+            $this->noImageSrc = \Yii::$app->assetManager->getPublishedUrl('@vendor/murodov20/yii2-redactor-imgmanager/assets') . '/photo/no-image.png';
         }
         \Yii::$app->i18n->translations['redactor'] = [
             'class' => 'yii\i18n\PhpMessageSource',
