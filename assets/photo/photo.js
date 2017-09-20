@@ -55,6 +55,7 @@ phSet = function (inputId) {
     }
 };
 jQuery(document).ready(function () {
+
     /**
      * Loader function, loads all images for hidden inputs
      */
@@ -62,11 +63,27 @@ jQuery(document).ready(function () {
         phSet($(this).attr('id'));
     });
 
+    var veno = function () {
+        $('.venobox-pm').venobox({
+            titleattr: 'data-caption',
+            border: '3px',
+            closeBackground: '#a94442',
+            frameHeight: '500px',
+            spinner: 'cube-grid'
+        });
+    };
     /**
      * Load images in modal
      */
     $(document).on('show.bs.modal', '.image-selector', function () {
-        $(this).find('.modal-body').load($(this).attr('loadUrl'));
+        $(this).find('.modal-body').load($(this).attr('loadUrl'), function () {
+            veno();
+        });
+    });
+
+
+    $(document).on('imgmanagerload', '#redactor-manager-box', function () {
+        veno();
     });
 
     /**

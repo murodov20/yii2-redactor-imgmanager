@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
 class MRedactorAsset extends AssetBundle
 {
 
-    public $sourcePath = __DIR__ . '/../assets/redactor';
+    public $sourcePath = __DIR__ . '/../assets';
 
     /**
      * @var string language for Redactor widget
@@ -26,17 +26,18 @@ class MRedactorAsset extends AssetBundle
     public $plugins = [];
 
     public $css = [
-        'redactor.css',
+        'redactor/redactor.css',
+        'base/style.css'
     ];
 
     public $js = [
-        'redactor.min.js',
+        'redactor/redactor.min.js',
+        'base/script.js'
     ];
 
     public $depends = [
         'yii\web\JqueryAsset',
-        'murodov20\redactor\web\VenoBoxAsset',
-        'murodov20\redactor\web\BaseAsset',
+        'murodov20\redactor\web\VenoBoxAsset'
     ];
 
     /**
@@ -46,14 +47,14 @@ class MRedactorAsset extends AssetBundle
     public function registerAssetFiles($view)
     {
         if ($this->language !== null) {
-            $this->js[] = 'lang/' . $this->language . '.js';
+            $this->js[] = 'redactor/lang/' . $this->language . '.js';
         }
         if (!empty($this->plugins)) {
             foreach ($this->plugins as $plugin) {
                 if ($plugin === 'clips') {
-                    $this->css[] = 'plugins/' . $plugin . '/' . $plugin . '.css';
+                    $this->css[] = 'redactor/plugins/' . $plugin . '/' . $plugin . '.css';
                 }
-                $this->js[] = 'plugins/' . $plugin . '/' . $plugin . '.js';
+                $this->js[] = 'redactor/plugins/' . $plugin . '/' . $plugin . '.js';
             }
         }
         parent::registerAssetFiles($view);

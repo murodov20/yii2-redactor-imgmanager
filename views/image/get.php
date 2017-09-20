@@ -16,10 +16,12 @@ use murodov20\redactor\web\VenoBoxAsset;
 $controller = $this->context;
 VenoBoxAsset::register($this);
 ?>
-<?php \yii\widgets\Pjax::begin([
+<?php
+$pjaxContainer = 'pjax-pm-img-get-' . rand(1, 100000) . '-' . rand(1, 100000);
+\yii\widgets\Pjax::begin([
     'enablePushState' => false,
     'enableReplaceState' => false,
-    'id' => 'pjax-pm-img-get-' . rand(1, 100000) . '-' . rand(1, 100000)
+    'id' => $pjaxContainer
 ]) ?>
 <?php
 $listRandom = rand(1, 100000) . '-' . rand(1, 100000);

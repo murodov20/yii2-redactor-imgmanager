@@ -24,6 +24,13 @@
                     url: this.opts.managerUrl,
                     success: $.proxy(function (data) {
                         $('#redactor-manager-box').html(data);
+                        $('.venobox-pm').venobox({
+                            titleattr: 'data-caption',
+                            border: '3px',
+                            closeBackground: '#a94442',
+                            frameHeight: '500px',
+                            spinner: 'cube-grid'
+                        });
                     }, this)
                 });
 

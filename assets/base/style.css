@@ -28,3 +28,6 @@
     padding: 0 5px;
 }
 
+.vbox-overlay {
+    z-index: 10400 !important;
+}

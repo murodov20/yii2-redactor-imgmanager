@@ -12,20 +12,21 @@ use yii\web\AssetBundle;
 
 class PhotoAsset extends AssetBundle
 {
-    public $sourcePath = __DIR__ . '/../assets/photo';
+    public $sourcePath = __DIR__ . '/../assets';
 
     public $plugins = [];
 
     public $css = [
-        'photo.css'
+        'photo/photo.css',
+        'base/style.css'
     ];
     public $js = [
-        'photo.js'
+        'photo/photo.js',
+        'base/script.js'
     ];
     public $depends = [
         'yii\web\JqueryAsset',
-        'murodov20\redactor\web\VenoBoxAsset',
-        'murodov20\redactor\web\BaseAsset',
+        'murodov20\redactor\web\VenoBoxAsset'
     ];
 
 }

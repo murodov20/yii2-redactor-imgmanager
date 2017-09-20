@@ -55,7 +55,7 @@
 			},
 			getCurrent: function()
 			{
-				var selection
+				var selection;
 				if (window.getSelection) selection = window.getSelection();
 				else if (document.selection && document.selection.type != "Control") selection = document.selection;
 

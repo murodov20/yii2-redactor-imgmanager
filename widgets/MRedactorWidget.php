@@ -66,6 +66,7 @@ class MRedactorWidget extends Widget
             $this->_renderTextarea = false;
         }
 
+
         // @codeCoverageIgnoreStart
         $request = Yii::$app->getRequest();
 

@@ -834,11 +834,11 @@
 
                     if (this.block.type == 'class') {
                         $el.addClass(this.block.value);
-                        return;
+
                     }
                     else if (this.block.type == 'attr' || this.block.type == 'data') {
                         $el.attr(this.block.value.name, this.block.value.value);
-                        return;
+
                     }
                 },
                 toggle: function ($el) {
@@ -849,7 +849,7 @@
 
                     if (this.block.type == 'class') {
                         $el.toggleClass(this.block.value);
-                        return;
+
                     }
                     else if (this.block.type == 'attr' || this.block.type == 'data') {
                         if ($el.attr(this.block.value.name) == this.block.value.value) {
@@ -859,11 +859,11 @@
                             $el.attr(this.block.value.name, this.block.value.value);
                         }
 
-                        return;
+
                     }
                     else {
                         $el.removeAttr('style class');
-                        return;
+
                     }
                 },
                 remove: function ($el) {
@@ -1440,7 +1440,7 @@
                     var func;
 
                     if ($.isFunction(callback)) callback.call(this, btnName);
-                    else if (callback.search(/\./) != '-1') {
+                    else if (callback.search(/\./) !== '-1') {
                         func = callback.split('.');
                         if (typeof this[func[0]] == 'undefined') return;
 
@@ -3306,7 +3306,7 @@
                             link = this.opts.linkProtocol + '://' + link;
                         }
 
-                        var target = ($('#redactor-image-link-blank').prop('checked')) ? true : false;
+                        var target = !!($('#redactor-image-link-blank').prop('checked'));
 
                         if ($link.length === 0) {
                             var a = $('<a href="' + link + '">' + this.utils.getOuterHtml($image) + '</a>');
@@ -4581,7 +4581,7 @@
                     var k = this.keyCode;
                     var keys = [k.BACKSPACE, k.DELETE, k.ENTER, k.ESC, k.TAB, k.CTRL, k.META, k.ALT, k.SHIFT];
 
-                    return ($.inArray(key, keys) == -1) ? true : false;
+                    return ($.inArray(key, keys) == -1);
 
                 },
                 addArrowsEvent: function (arrow) {
@@ -4599,13 +4599,13 @@
                     {
                         e.preventDefault();
                         this.buffer.undo();
-                        return;
+
                     }
                     // undo
                     else if (this.keydown.ctrl && key === 90 && e.shiftKey && !e.altKey && this.opts.rebuffer.length !== 0) {
                         e.preventDefault();
                         this.buffer.redo();
-                        return;
+
                     }
                     else if (!this.keydown.ctrl) {
                         if (key == this.keyCode.BACKSPACE || key == this.keyCode.DELETE || (key == this.keyCode.ENTER && !e.ctrlKey && !e.shiftKey)) {
@@ -4739,7 +4739,7 @@
 
                     }
 
-                    return;
+
 
                 },
                 insertAfterLastElement: function (element) {
@@ -8102,7 +8102,7 @@
 
                     var offset = this.caret.getOffsetOfElement(block);
 
-                    return (offset === 0) ? true : false;
+                    return (offset === 0);
                 },
                 isEndOfElement: function (element) {
                     if (typeof element == 'undefined') {
@@ -8113,12 +8113,12 @@
                     var offset = this.caret.getOffsetOfElement(element);
                     var text = $.trim($(element).text()).replace(/\n\r\n/g, '');
 
-                    return (offset == text.length) ? true : false;
+                    return (offset == text.length);
                 },
                 isStartOfEditor: function () {
                     var offset = this.caret.getOffsetOfElement(this.$editor[0]);
 
-                    return (offset === 0) ? true : false;
+                    return (offset === 0);
                 },
                 isEndOfEditor: function () {
                     var block = this.$editor[0];
@@ -8126,7 +8126,7 @@
                     var offset = this.caret.getOffsetOfElement(block);
                     var text = $.trim($(block).html().replace(/(<([^>]+)>)/gi, ''));
 
-                    return (offset == text.length) ? true : false;
+                    return (offset == text.length);
                 },
 
                 // test blocks
@@ -8189,7 +8189,7 @@
                             }
                         }, this));
 
-                        return (matched === 0) ? false : true;
+                        return (matched !== 0);
                     }
                     else {
                         return this.utils.isCurrentOrParentOne(current, parent, tagName);
@@ -8204,10 +8204,10 @@
 
                 // browsers detection
                 isOldIe: function () {
-                    return (this.utils.browser('msie') && parseInt(this.utils.browser('version'), 10) < 9) ? true : false;
+                    return !!(this.utils.browser('msie') && parseInt(this.utils.browser('version'), 10) < 9);
                 },
                 isLessIe10: function () {
-                    return (this.utils.browser('msie') && parseInt(this.utils.browser('version'), 10) < 10) ? true : false;
+                    return !!(this.utils.browser('msie') && parseInt(this.utils.browser('version'), 10) < 10);
                 },
                 isIe11: function () {
                     return !!navigator.userAgent.match(/Trident\/7\./);
